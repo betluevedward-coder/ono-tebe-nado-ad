@@ -208,47 +208,33 @@ ul {
 .card {
   position: relative;
   height: 100%;
+  padding: 48px 40px 15px 40px; /* Отступы сверху, по бокам и снизу */
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
-  overflow: hidden; /* Обрезает всё, что вылезает за пределы карточки */
 }
 
 .card_type_film {
   background-image: url("../images/card-lot-01.jpg");
-  top: 375px;
 }
 
 .card_type_book {
   background-image: url("../images/card-lot-02.jpg");
-  top: 175px;
 }
 
 .card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
-  top: 265px;
 }
 
 /* Заголовки ставим абсолютно на 48px сверху */
 .card__title {
-  position: absolute;
-  top: 48px;
-  left: 40px;
-  width: 254px; /* Точная ширина из Figma */
-  z-index: 2;
-  margin: 0;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  margin-bottom: auto; 
 }
 
-/* Текст ставим абсолютно, задаем общие свойства */
 .card__text {
-  position: absolute;
-  left: 40px;
-  width: 254px; /* Точная ширина из Figma */
-  z-index: 2;
+  /* никакого absolute, просто обычный блок */
+  width: 254px; 
   margin: 0;
   font-size: 20px;
   line-height: 1.2;
