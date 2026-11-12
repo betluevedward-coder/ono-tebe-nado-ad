@@ -210,6 +210,7 @@ ul {
   height: 100%;
   background-size: cover;
   background-position: center;
+  overflow: hidden; /* Обрезает всё, что вылезает за пределы карточки */
 }
 
 .card_type_film {
