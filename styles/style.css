@@ -184,14 +184,14 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 179px;
-  margin-bottom: 57px; /* Отступ от заголовка до карточек */
-  margin-left: 16px; /* Сдвиг заголовка (40px от края страницы) */
+  margin-bottom: 27px;
+  margin-left: 16px;
 }
 
 .lots__card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px; /* Расстояние между карточками */
+  gap: 25px;
 }
 
 .lots__card-list-item {
@@ -202,16 +202,12 @@ ul {
   display: block;
   height: 100%;
   color: #fff;
+  text-decoration: none;
 }
 
 .card {
   position: relative;
   height: 100%;
-  /* Отступы внутри карточки: 48 сверху, 40 по бокам, 15 снизу (как в Figma) */
-  padding: 48px 40px 15px 40px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Прижимает текст к низу, а заголовок к верху */
   background-size: cover;
   background-position: center;
 }
@@ -228,32 +224,49 @@ ul {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-.card__title,
-.card__text {
-  position: relative;
-  z-index: 2;
-  max-width: 254px; 
-}
-
+/* Заголовки ставим абсолютно на 48px сверху */
 .card__title {
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  width: 254px; /* Точная ширина из Figma */
+  z-index: 2;
+  margin: 0;
   font-size: 22px;
   font-weight: 700;
-  text-transform: uppercase;
   line-height: 1.2;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
+/* Текст ставим абсолютно, задаем общие свойства */
 .card__text {
+  position: absolute;
+  left: 40px;
+  width: 254px; /* Точная ширина из Figma */
+  z-index: 2;
+  margin: 0;
   font-size: 20px;
-  font-weight: 400;
   line-height: 1.2;
+}
+
+/* ТОЧНЫЕ КООРДИНАТЫ TOP ДЛЯ КАЖДОЙ КАРТОЧКИ ИЗ ТВОИХ СКРИНШОТОВ */
+.card_type_film .card__text {
+  top: 404px;
+}
+
+.card_type_book .card__text {
+  top: 188px;
+}
+
+.card_type_picture .card__text {
+  top: 284px;
 }
 
 .lots__look-more-link {
   display: inline-block;
-  margin-top: 42px;
-  margin-left: 40px; /* Сдвиг ссылки (64px от края страницы) */
+  margin-top: 30px;
+  margin-left: 40px;
   font-size: 20px;
   text-decoration: underline;
   text-underline-offset: 4px;
