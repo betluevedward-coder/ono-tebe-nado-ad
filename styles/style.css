@@ -108,53 +108,51 @@ ul {
   z-index: 1;
 }
 
-/* Жестко ставим контейнер заголовка по координатам из Figma */
+/* Контейнер заголовка больше не влияет на поток */
 .cover__title {
-  position: absolute;
-  top: 165px;   /* Твой Top из Figma */
-  left: 50px;   /* Твой Left из Figma */
-  width: 1000px; /* 1100 (ширина сайта) - 50 - 50 (отступы) */
-  height: 385px;
   margin: 0;
+  padding: 0;
+}
+
+/* Общие стили для всех строк из твоих скриншотов */
+.aligned-text {
+  position: absolute;
   font-size: 100px;
   font-weight: 700;
+  line-height: 1.15; /* 115% */
+  letter-spacing: 0.3em; /* 30% */
   text-transform: uppercase;
   z-index: 2;
 }
 
-/* Каждая строка позиционируется отдельно */
-.aligned-text {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  line-height: 1.15; /* 115% из Figma */
-  letter-spacing: 0.3em; /* 30% из Figma */
-}
-
-/* ОНО — Top: 165px (относительно родителя это 0) */
+/* 1. ОНО — Top 165px, Left 50px */
 .aligned-text_left {
-  top: 0; 
-  text-align: left;
+  top: 165px;
+  left: 50px;
 }
 
-/* ТЕБЕ — Top: 300px (300 - 165 = 135px от родителя) */
+/* 2. ТЕБЕ — Top 300px, Left 380.5px, Width 339px, по центру */
 .aligned-text_center {
-  top: 135px; 
+  top: 300px;
+  left: 380.5px;
+  width: 339px;
   text-align: center;
 }
 
-/* НАДО — Top: 435px (435 - 165 = 270px от родителя) */
+/* 3. НАДО — Top 435px, Left 663px, Width 387px, справа */
 .aligned-text_right {
-  top: 270px; 
+  top: 435px;
+  left: 663px;
+  width: 387px;
   text-align: right;
 }
 
-/* Описание и кнопку тоже ставим абсолютно, чтобы они не съехали из-за заголовка */
+/* Описание и кнопку ставим вниз по координатам */
 .cover__description {
   position: absolute;
-  bottom: 50px; /* Судя по макету, отступ снизу */
+  bottom: 46px; /* Примерный отступ снизу по макету */
   left: 50px;
-  width: 1000px;
+  width: 1000px; /* 1100 - 50 - 50 */
   display: flex;
   justify-content: space-between;
   align-items: center;
