@@ -95,13 +95,9 @@ ul {
 .cover {
   position: relative;
   height: 757px;
-  padding: 50px;
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: #fff;
 }
 
@@ -112,49 +108,57 @@ ul {
   z-index: 1;
 }
 
-.cover__title,
-.cover__description {
-  position: relative;
-  z-index: 2;
-}
-
+/* Жестко ставим контейнер заголовка по координатам из Figma */
 .cover__title {
-  width: 100%;
-  height: 385px; /* Высота блока из макета */
-  margin-top: 115px; /* Отступ сверху (165px из макета минус 50px padding обложки) */
+  position: absolute;
+  top: 165px;   /* Твой Top из Figma */
+  left: 50px;   /* Твой Left из Figma */
+  width: 1000px; /* 1100 (ширина сайта) - 50 - 50 (отступы) */
+  height: 385px;
+  margin: 0;
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
-  
-  /* Выстраиваем строки друг под другом с точным отступом */
-  display: flex;
-  flex-direction: column;
-  gap: 20px; 
+  z-index: 2;
 }
 
+/* Каждая строка позиционируется отдельно */
 .aligned-text {
-  display: block;
+  position: absolute;
+  left: 0;
   width: 100%;
-  letter-spacing: 0.3em; /* Межбуквенное расстояние 30% из макета */
-  line-height: 1.15; /* Межстрочный интервал 115% из макета */
+  line-height: 1.15; /* 115% из Figma */
+  letter-spacing: 0.3em; /* 30% из Figma */
 }
 
+/* ОНО — Top: 165px (относительно родителя это 0) */
 .aligned-text_left {
+  top: 0; 
   text-align: left;
 }
 
+/* ТЕБЕ — Top: 300px (300 - 165 = 135px от родителя) */
 .aligned-text_center {
+  top: 135px; 
   text-align: center;
 }
 
+/* НАДО — Top: 435px (435 - 165 = 270px от родителя) */
 .aligned-text_right {
+  top: 270px; 
   text-align: right;
 }
 
+/* Описание и кнопку тоже ставим абсолютно, чтобы они не съехали из-за заголовка */
 .cover__description {
+  position: absolute;
+  bottom: 50px; /* Судя по макету, отступ снизу */
+  left: 50px;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .cover__description-text {
