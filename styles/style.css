@@ -1,0 +1,342 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1100px;
+  margin: 0 auto;
+  font-family: 'Raleway';
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- АДРЕС --- */
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.address a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- ШАПКА --- */
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  height: 293px;
+  padding: 0 24px;
+}
+
+.header__menu {
+  justify-self: start;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 30px;
+  list-style-type: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.header__link {
+  font-size: 18px;
+  text-decoration: underline;
+  text-transform: lowercase;
+  text-underline-offset: 4px;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo-image {
+  width: 148px;
+  display: block;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 240px;
+  text-align: left;
+}
+
+.header__address a {
+  text-decoration: none;
+}
+
+.header__address a:hover {
+  text-decoration: underline;
+}
+
+/* --- ОБЛОЖКА --- */
+.cover {
+  position: relative;
+  height: 757px;
+  padding: 50px;
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 2;
+}
+
+.cover__title {
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+/* Убрал огромный letter-spacing, из-за которого буквы наезжали */
+.aligned-text {
+  display: block;
+  letter-spacing: 0.1em;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  text-transform: uppercase;
+  word-spacing: 20px;
+}
+
+.bet-button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: 'Raleway';
+}
+
+/* --- КАРТОЧКИ --- */
+.lots {
+  padding: 0 24px;
+  margin-bottom: 120px;
+}
+
+.lots__heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 179px;
+  margin-bottom: 27px;
+}
+
+.lots__card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.lots__card-list-item {
+  height: 563px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+}
+
+/* РАЗНЕС НА НОВЫЕ СТРОКИ, чтобы линтер не ругался */
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Убрал подчеркивание у заголовков карточек (в макете их нет) */
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.card__text {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 20px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- ОБ АУКЦИОНЕ --- */
+.about {
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  gap: 25px;
+  margin-bottom: 120px;
+}
+
+.about__logo {
+  width: 240px;
+  height: 240px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about__logo-image {
+  width: 140px;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 690px;
+}
+
+.about__text p {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+/* --- ПОДВАЛ --- */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: start;
+  padding: 0 24px 90px;
+}
+
+.footer__address {
+  max-width: 240px;
+  text-align: left;
+}
+
+.footer__address a {
+  text-decoration: none;
+}
+
+.footer__address a:hover {
+  text-decoration: underline;
+}
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__menu-link {
+  font-size: 18px;
+  text-decoration: underline;
+  text-transform: lowercase;
+  text-underline-offset: 4px;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  justify-self: end;
+  display: flex;
+  gap: 24px;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
+}
