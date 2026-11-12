@@ -244,7 +244,7 @@ ul {
 .card__text {
   position: absolute;
   left: 40px;
-  bottom: 15px; /* Ровно 15px от нижнего края */
+  bottom: 30px; 
   width: 254px; /* Точная ширина */
   z-index: 2;
   margin: 0;
