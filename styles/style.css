@@ -108,13 +108,11 @@ ul {
   z-index: 1;
 }
 
-/* Контейнер заголовка больше не влияет на поток */
 .cover__title {
   margin: 0;
   padding: 0;
 }
 
-/* Общие стили для всех строк из твоих скриншотов */
 .aligned-text {
   position: absolute;
   font-size: 100px;
@@ -147,7 +145,6 @@ ul {
   text-align: right;
 }
 
-/* Описание и кнопку ставим вниз по координатам */
 .cover__description {
   position: absolute;
   bottom: 46px; /* Примерный отступ снизу по макету */
@@ -235,7 +232,7 @@ ul {
 .card__text {
   position: relative;
   z-index: 2;
-  max-width: 254px; /* Точная ширина текста из Figma */
+  max-width: 254px; 
 }
 
 .card__title {
@@ -287,16 +284,15 @@ ul {
   width: 140px; /* Размер белого логотипа внутри */
 }
 
-/* Применяем отступ сверху ко второй (правой) колонке */
 .about__column:last-child {
-  margin-top: 133px; /* Точный Top из Figma для текстового блока */
+  margin-top: 133px; 
 }
 
 .about__title {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px; /* Небольшой отступ от заголовка до текста */
+  margin-bottom: 20px; 
 }
 
 .about__text {
@@ -314,7 +310,6 @@ ul {
 /* --- ПОДВАЛ --- */
 .footer {
   display: grid;
-  /* Поменяли min-content на auto, чтобы колонка подстраивалась под текст */
   grid-template-columns: 1fr auto 1fr; 
   align-items: start;
   padding: 0 50px 90px;
@@ -345,7 +340,7 @@ ul {
 }
 
 .footer__menu-list-item {
-  white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+  white-space: nowrap; 
 }
 
 .footer__menu-link {
