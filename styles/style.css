@@ -244,24 +244,12 @@ ul {
 .card__text {
   position: absolute;
   left: 40px;
-  width: 254px; /* Точная ширина из Figma */
+  bottom: 15px; /* Ровно 15px от нижнего края */
+  width: 254px; /* Точная ширина */
   z-index: 2;
   margin: 0;
   font-size: 20px;
-  line-height: 1.2;
-}
-
-/* ТОЧНЫЕ КООРДИНАТЫ TOP */
-.card_type_film .card__text {
-  top: 389px; /* Было 404px */
-}
-
-.card_type_book .card__text {
-  top: 173px; /* Было 188px */
-}
-
-.card_type_picture .card__text {
-  top: 269px; /* Было 284px */
+  line-height: 1.2; 
 }
 
 .lots__look-more-link {
