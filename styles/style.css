@@ -208,11 +208,9 @@ ul {
 .card {
   position: relative;
   height: 100%;
-  padding: 48px 40px 15px 40px; /* Отступы сверху, по бокам и снизу */
-  display: flex;
-  flex-direction: column;
   background-size: cover;
   background-position: center;
+  overflow: hidden; /* Обрезает всё, что вылезает за пределы карточки */
 }
 
 .card_type_film {
@@ -229,12 +227,25 @@ ul {
 
 /* Заголовки ставим абсолютно на 48px сверху */
 .card__title {
-  margin-bottom: auto; 
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  width: 254px; /* Точная ширина из Figma */
+  z-index: 2;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
+/* Текст ставим абсолютно, задаем общие свойства */
 .card__text {
-  /* никакого absolute, просто обычный блок */
-  width: 254px; 
+  position: absolute;
+  left: 40px;
+  width: 254px; /* Точная ширина из Figma */
+  z-index: 2;
   margin: 0;
   font-size: 20px;
   line-height: 1.2;
