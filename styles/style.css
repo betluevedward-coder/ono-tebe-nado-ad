@@ -251,17 +251,17 @@ ul {
   line-height: 1.2;
 }
 
-/* ТОЧНЫЕ КООРДИНАТЫ TOP ДЛЯ КАЖДОЙ КАРТОЧКИ ИЗ ТВОИХ СКРИНШОТОВ */
+/* ТОЧНЫЕ КООРДИНАТЫ TOP */
 .card_type_film .card__text {
-  top: 404px;
+  top: 389px; /* Было 404px */
 }
 
 .card_type_book .card__text {
-  top: 188px;
+  top: 173px; /* Было 188px */
 }
 
 .card_type_picture .card__text {
-  top: 284px;
+  top: 269px; /* Было 284px */
 }
 
 .lots__look-more-link {
