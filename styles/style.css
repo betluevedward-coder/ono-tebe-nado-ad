@@ -240,11 +240,10 @@ ul {
   text-underline-offset: 4px;
 }
 
-/* Текст ставим абсолютно, задаем общие свойства */
 .card__text {
   position: absolute;
   left: 40px;
-  bottom: 30px; 
+  bottom: 40px; 
   width: 254px; /* Точная ширина */
   z-index: 2;
   margin: 0;
