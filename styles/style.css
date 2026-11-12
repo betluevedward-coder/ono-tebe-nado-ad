@@ -120,19 +120,27 @@ ul {
 
 .cover__title {
   width: 100%;
-  height: 385px; /* Точная высота из Figma */
-  margin-top: 115px; /* Отступ сверху: 165px (из Figma) минус 50px (padding родителя) */
-  font-size: 100px; /* Размер шрифта (подгони, если нужно) */
+  height: 385px; /* Высота блока из макета */
+  margin-top: 115px; /* Отступ сверху (165px из макета минус 50px padding обложки) */
+  font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1.28; /* Межстрочный интервал, чтобы 3 строки влезли в 385px */
-  letter-spacing: 0.25em; /* Расстояние между буквами */
+  
+  /* Выстраиваем строки друг под другом с точным отступом */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
 
-/* Убрал огромный letter-spacing */
 .aligned-text {
   display: block;
-  letter-spacing: 0.1em;
+  width: 100%;
+  letter-spacing: 0.3em; /* Межбуквенное расстояние 30% из макета */
+  line-height: 1.15; /* Межстрочный интервал 115% из макета */
+}
+
+.aligned-text_left {
+  text-align: left;
 }
 
 .aligned-text_center {
