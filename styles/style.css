@@ -147,7 +147,7 @@ ul {
 
 .cover__description {
   position: absolute;
-  bottom: 46px; /* Примерный отступ снизу по макету */
+  bottom: 46px; 
   left: 50px;
   width: 1000px; /* 1100 - 50 - 50 */
   display: flex;
@@ -225,7 +225,7 @@ ul {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-/* Заголовки ставим абсолютно на 48px сверху */
+/* Заголовки поставил абсолютно на 48px сверху */
 .card__title {
   position: absolute;
   top: 48px;
@@ -277,8 +277,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 35px; /* Точный Top из Figma */
-  margin-left: 23px; /* Точный Left из Figma (47px - 24px padding) */
+  margin-top: 35px; 
+  margin-left: 23px; 
 }
 
 .about__logo-image {
