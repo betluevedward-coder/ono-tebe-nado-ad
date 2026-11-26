@@ -211,6 +211,7 @@ ul {
   background-size: cover;
   background-position: center;
   overflow: hidden; /* Обрезает всё, что вылезает за пределы карточки */
+  padding: 0; 
 }
 
 .card_type_film {
