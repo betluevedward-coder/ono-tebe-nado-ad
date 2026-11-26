@@ -232,18 +232,17 @@ ul {
   top: 48px;
   left: 40px;
   width: 254px;
+  height: 110px;      
   z-index: 2;
   margin: 0;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 22px;
-  letter-spacing: 0;        
-  text-transform: uppercase; 
-  line-height: 1.2;          
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
   text-decoration: underline;
-  text-underline-offset: 4px; 
 }
-
 
 .card__text {
   position: absolute;
