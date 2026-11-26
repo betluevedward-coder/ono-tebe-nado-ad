@@ -243,6 +243,7 @@ ul {
 
 .card__text {
   position: absolute;
+  bottom: 15px;
   left: 40px;
   width: 254px; /* Точная ширина */
   z-index: 2;
