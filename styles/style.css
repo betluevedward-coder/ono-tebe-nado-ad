@@ -211,7 +211,6 @@ ul {
   background-size: cover;
   background-position: center;
   overflow: hidden; /* Обрезает всё, что вылезает за пределы карточки */
-  padding: 0; 
 }
 
 .card_type_film {
@@ -231,33 +230,25 @@ ul {
   position: absolute;
   top: 48px;
   left: 40px;
-  width: 254px;
-  height: 110px;      
+  width: 254px; /* Точная ширина из Figma */
   z-index: 2;
   margin: 0;
-  font-family: 'Raleway';
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0;
-  text-transform: uppercase;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .card__text {
   position: absolute;
-  bottom: auto;
   left: 40px;
+  bottom: 40px; 
   width: 254px; /* Точная ширина */
   z-index: 2;
   margin: 0;
-  padding: 0;
-  font-family: 'Raleway';
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  line-height: 1.2;   /* это и есть 120% */
-  letter-spacing: 0;
+  line-height: 1.2; 
 }
 
 .lots__look-more-link {
@@ -376,19 +367,4 @@ ul {
 .footer__social-icon {
   width: 48px;
   height: 48px;
-}
-/* Точные координаты из Figma */
-.card_type_film .card__text {
-  top: 404px;
-  height: 144px;
-}
-
-.card_type_book .card__text {
-  top: 188px;
-  height: 360px;
-}
-
-.card_type_picture .card__text {
-  top: 284px;
-  height: 264px;
 }
