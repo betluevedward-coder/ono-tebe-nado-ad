@@ -231,15 +231,19 @@ ul {
   position: absolute;
   top: 48px;
   left: 40px;
-  width: 254px; /* Точная ширина из Figma */
+  width: 254px;
   z-index: 2;
   margin: 0;
-  font-size: 22px;
+  font-family: 'Raleway';
   font-weight: 700;
-  line-height: 1.2;
+  font-size: 22px;
+  letter-spacing: 0;        
+  text-transform: uppercase; 
+  line-height: 1.2;          
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 4px; 
 }
+
 
 .card__text {
   position: absolute;
