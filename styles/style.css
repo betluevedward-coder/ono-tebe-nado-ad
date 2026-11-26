@@ -195,6 +195,7 @@ ul {
 }
 
 .lots__card-list-item {
+  position: relative
   height: 563px;
 }
 
